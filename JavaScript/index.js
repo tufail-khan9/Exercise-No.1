@@ -21,8 +21,9 @@ console.log(firsName.length);
 console.log(firsName[4]);
 
 //replace a string over another string
-var text = "www.tufail.com";
-console.log(text.replace("www.tufail.com", "www.tufailrose.com"));
+var rep = "www.tufail.com";
+document.getElementById("trans").innerHTML = rep.replace("www.tufail.com", "http//:www.tufail.com")
+
 
 //some basic maths operation
 var num1 =10;
@@ -62,20 +63,28 @@ console.log(text);
 
 
 //for age caculation
-var banner = $("#banner-message")
-var button = $("button")
+// var banner = $("#banner-message")
+// var button = $("button")
 
-// handle click and add class
-button.on("click", function(){
-  var inputValue = $("#txtInput").val();
-  var age = parseInt(moment().diff(inputValue,'years',true));
+// // handle click and add class
+// button.on("click", function(){
+//   var inputValue = $("#txtInput").val();
+//   var age = parseInt(moment().diff(inputValue,'years',true));
   
-  $("#spantext").html(age + ' years.');
-})
+//   $("#spantext").html(age + ' years.');
+// })
+
+function calculateAge() {
+  var birthdateInput = document.getElementById("birthdate").value;
+  var birthdate = new Date(birthdateInput);
+  var currentYear = new Date().getFullYear();
+  var birthYear = birthdate.getFullYear();
+  var age = currentYear - birthYear;
+  document.getElementById("ageDisplay").innerHTML = "You are " + age + " years old.";
+}
 
 
-//set this in div which id is student-message
-// Variables to store first name, last name, and year of birth
+// student data that has aVariables to store first name, last name, and year of birth
 var firstName = "tufail";
 var lastName = "khan";
 var yearOfBirth = 1995; // Example year of birth
@@ -88,22 +97,24 @@ var text = "Hi, my name is " + firstName + " " + lastName + " " + ", I'm " + (ne
 
 // Set the text inside the blue box (div)
 blueBox.html(text);
+// End div of student data
 
 //average formula
 var num1 = 101;
 var num2 = 7;
 var result = num1+num2/2;
-var std =$("#student-data");
-var ave = "the average is"+ " " + (result);
-std.html(ave);
+document.getElementById("student-data").innerHTML =  "the average is"+ " " + (result);
+
+
+
 
 //divide two numbers and result with two decimal places
 var num1 = 101;
 var num2 = 7;
 var twodecimal = +((num1 / num2).toFixed(2));
-var text1 =$("#two-decimal");
-var deci = "the average is"+ " " + (twodecimal);
-text1.html(deci);
+document.getElementById("two-decimal").innerHTML = "the average is"+ " " + (twodecimal);
+
+
 
 //test phon number valid or not
 function validate()
@@ -115,6 +126,31 @@ function validate()
   else
     alert("invalid");
 }
+
+//power operations here
+   var text = "the 32 power 6 is =";
+   var power = Math.pow(32,6);
+   console.log(text,power);
+
+   //check different errors on console
+    var quantity = "25";
+    var number = 6;
+    var pressure;
+    var temperature = null;
+    console.log(quantity += quantity); 
+    console.log( (7+5) / number + 2 ); 
+    console.log(pressure); 
+    console.log(temperature); 
+    console.log(typeof pressure); 
+    console.log(typeof temperature);
+
+
+    //transformation to the url
+    var currentUrl  = "www.udemy.com";
+    var currentUrl2 = "http://www.udemy.com";
+    document.getElementById("replace-url").innerHTML = "the &nbsp; www.udemy.com &nbsp; is replace to " + '&nbsp;' + '&nbsp;' + currentUrl.replace("www.udemy.com", "http//:www.udemy.com")
+    + "<br>" + "<br>" + "the &nbsp; https://www.udemy.com &nbsp; is replace to "+ '&nbsp;' + '&nbsp;'+ currentUrl2.replace("http://www.udemy.com", "www.udemy.com");
+
 
 
 

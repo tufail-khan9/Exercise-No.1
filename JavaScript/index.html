@@ -8,12 +8,23 @@
     
 </head>
 <body>
+    <div id="trans">
     
+    </div>
     <!-- Calculat age -->
-    <div id="banner-message">
+    <!-- <div id="banner-message">
         <p>Enter Date: <input type='text' id='txtInput' value='1981-12-25' /></p>
         <label>Age is : </label><span id='spantext'></span> <br/>
         <p><button>Calculate Age</button></p>
+    </div> -->
+
+    <div>
+        <label for="birthdate">Enter your birth date:</label>
+        <input type="date" id="birthdate">
+        <button onclick="calculateAge()">Calculate Age</button>
+    </div>
+    <div id="ageDisplay">
+        <!-- Age will be displayed here -->
     </div>
     <br><br>
     <div id="student-message">
@@ -29,6 +40,20 @@
     <input id="pno" placeholder="phonenumber" type="tel"  > 
     </br></br>
     <button onclick="validate()" type="button">submit</button>
+</div><br><br>
+<div id="variable-rule">
+    <p> this is valid variable name (var NAME) as Upercase is allowed</p>
+    <p> this is valid variable name (var $num1) as $ is allowed at the start of variable name</p>
+    <p> this is Invalid variable name (var typeof) as typeof  is kiyword</p>
+    <p> this is invalid variable name (var first-name) as hypen is not allowed</p>
+    <p> this is valid variable name (var attempt_2) as uderscore is allowed</p>
+    <p> this is invalid variable name (var 2ndAttempt) as digit is not allowed at the start</p>
+    <p> this is invalid variable name ( var full name) as spac is not allowed </p>
+</div>
+
+<br><br>
+<div id="replace-url" style="border: 1px solid blue; height: 80px;">
+</div>
   </body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
