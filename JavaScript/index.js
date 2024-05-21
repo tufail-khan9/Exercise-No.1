@@ -56,7 +56,65 @@ console.log(roundNumber3);
 var roundNumber4 = Math.sqrt(4);
 console.log(roundNumber4);
 
+var text = "this is ex1.js";
+console.log(text);
 
+
+
+//for age caculation
+var banner = $("#banner-message")
+var button = $("button")
+
+// handle click and add class
+button.on("click", function(){
+  var inputValue = $("#txtInput").val();
+  var age = parseInt(moment().diff(inputValue,'years',true));
+  
+  $("#spantext").html(age + ' years.');
+})
+
+
+//set this in div which id is student-message
+// Variables to store first name, last name, and year of birth
+var firstName = "tufail";
+var lastName = "khan";
+var yearOfBirth = 1995; // Example year of birth
+
+// Update text inside the blue box (div)
+var blueBox = $("#student-message");
+
+// Construct the text using variables
+var text = "Hi, my name is " + firstName + " " + lastName + " " + ", I'm " + (new Date().getFullYear() - yearOfBirth) + " " + " years old and I'm learning JavaScript.";
+
+// Set the text inside the blue box (div)
+blueBox.html(text);
+
+//average formula
+var num1 = 101;
+var num2 = 7;
+var result = num1+num2/2;
+var std =$("#student-data");
+var ave = "the average is"+ " " + (result);
+std.html(ave);
+
+//divide two numbers and result with two decimal places
+var num1 = 101;
+var num2 = 7;
+var twodecimal = +((num1 / num2).toFixed(2));
+var text1 =$("#two-decimal");
+var deci = "the average is"+ " " + (twodecimal);
+text1.html(deci);
+
+//test phon number valid or not
+function validate()
+{
+  var text = document.getElementById("pno").value;
+  var regx = new RegExp("^\\d{9}$");
+  if(regx.test(text))
+    alert("valid");
+  else
+    alert("invalid");
+}
 
 
 
