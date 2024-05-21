@@ -151,7 +151,11 @@ function validate()
     document.getElementById("replace-url").innerHTML = "the &nbsp; www.udemy.com &nbsp; is replace to " + '&nbsp;' + '&nbsp;' + currentUrl.replace("www.udemy.com", "http//:www.udemy.com")
     + "<br>" + "<br>" + "the &nbsp; https://www.udemy.com &nbsp; is replace to "+ '&nbsp;' + '&nbsp;'+ currentUrl2.replace("http://www.udemy.com", "www.udemy.com");
 
-
+  //update textboxe with new value
+  function setValue() {
+    document.getElementById('bbb').value = "new value here";
+    document.getElementById("form1").submit();
+}
 
 
 
